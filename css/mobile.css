@@ -1,0 +1,50 @@
+·navbar{
+  justify-content: center;
+}
+#navbar div{
+  justify-content: space-between;
+  
+  margin: auto;
+  
+}
+#navbar div ul{
+flex-direction: column;
+justify-content: center;
+}
+
+h1{
+  text-align: center;
+}
+
+#navbar div ul li a{
+  padding: .1rem;
+  line-height: 1.5rem;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr ;
+  margin: 1rem;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  /* grid-template-rows: 300px 300px 300px 300px; */
+  column-gap: 1.5rem;
+}
+
+
+.contenido-vitrina{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 2rem;
+  /* Overlay */
+  position: absolute;
+  top: 78px;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+}

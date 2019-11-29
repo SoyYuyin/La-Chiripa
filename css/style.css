@@ -1,0 +1,376 @@
+@font-face {
+  font-family: 'noelanscript';
+  src: url('../fonts/noelan_script_fixes-webfont.woff2') format('woff2'),
+       url('../fonts/noelan_script_fixes-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* colores 
+
+negro #0a0b0d
+rojo #d62421
+light red #E6605D
+
+complementario cyan #21d3d6 
+light complementario cyan #5de3e6
+
+*/
+
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  background: var(--dark-color);
+}
+
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+/* Utility Classes */
+:root{
+  --primary-color:#d62421;
+  --light-primary: #E6605D;
+  --dark-color: #444;
+  --complementary-color: #21d3d6;
+  --light-complementary: #5de3e6;
+  --light-dark:#6a6a6a;
+}
+
+.fontchiripa{
+  font-family: 'noelanscript';
+}
+
+.text-primary{
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 1rem;
+  font-size: 1rem;
+}
+
+.primary-color{
+  color: var(--primary-color)
+}
+
+.logo{
+  font-family: 'noelanscript';
+  font-weight: 200;
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.py-1{
+  padding: 1.5rem 0;
+}
+
+/* themes */
+
+.dark-theme{
+  color: white;
+  background: var(--dark-color);
+  font-size: 1rem;
+}
+
+.light-dark-theme{
+  color: white;
+  background: var(--light-dark);
+  font-size: 1rem;
+}
+
+.light-theme{
+  color: #000;
+  background: whitesmoke;
+  border: var(--dark-color) 1px solid;
+  font-size: 1rem
+}
+
+.primary-theme{
+color: white;
+background: var(--primary-color);
+}
+
+.complementary-theme{
+  color: black;
+  background: var(--complementary-color);
+}
+
+
+/* Navbar */
+#navbar {
+  display: flex;
+  position: sticky;
+  top:0;
+  background: var(--dark-color);
+  color: #fff;
+  justify-content: center;
+  z-index: 2;
+  font-size: 1rem;
+  line-height: 1.4;
+  border-bottom: var(--complementary-color) 2px solid;
+}
+
+
+#navbar div	{
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  z-index: 1;
+  padding:2px 20px; 
+  margin: 0 50px; 
+}
+
+#navbar div ul{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  flex-direction: row;
+}
+
+#navbar div ul li a {
+  color: #fff;
+  padding: 0.75rem;
+  margin: 0 0.25rem;
+  border-radius: .2rem;
+}
+
+#navbar div ul li a:hover {
+background-color: var(--primary-color)
+}
+
+#navbar a .logo {
+  text-decoration:none;
+  color: white;
+  padding: 5px 15px 15px 15px;
+}
+/* Vitrina */
+#vitrina{
+  background: var(--dark-color) url(../img/entrada.jpg) no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+}
+
+.contenido-vitrina{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 2rem;
+  /* Overlay */
+  position: absolute;
+  top: 70px;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.l-heading{
+  font-size: 4rem;
+  text-shadow: 3px 3px 8px #111;
+  line-height: 4.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#vitrina .contenido-vitrina a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: .5rem;
+  background: rgba(68,68,68, 0.7);
+  margin-top: 2rem;
+}
+
+#vitrina .contenido-vitrina a:hover{
+  background-color: var(--primary-color);
+}
+
+
+/* conocenos */
+#conocenos{
+  background: var(--dark-color);
+  color: white;
+}
+
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  /* grid-template-rows: 300px 300px 300px 300px; */
+  padding: 0 1rem;
+
+  }
+
+/* responsive grid widescreen */
+@media(min-width:1100px){
+  .container{
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 300px 300px 300px 300px; */
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+  }
+}
+
+.container img{
+  max-width: 30rem;
+  }
+.card{
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+  line-height: 2rem;
+  border-radius: 1rem;
+  min-width: 0; 
+  min-height: 0;
+}
+
+.card img{
+ width: 100%;
+ border-radius: .5rem;
+}
+
+#contacto{
+  background: var(--complementary-color);
+  align-items: center;
+  text-align: center;
+}
+
+
+
+#contacto div{
+  padding: 1rem 1rem;
+}
+
+#contacto div:nth-child(3), #contacto div:nth-child(5){
+  border-radius: 1rem;
+  background: var(--light-primary);
+}
+#contacto div a{
+  text-decoration: none;
+  color:black;
+
+}
+#contacto div a span:hover{
+  text-decoration: none;
+  background-color: var(--dark-color);
+  color: white;
+  padding: .2rem;
+}
+
+.icon{
+  font-size: 5rem;
+ }
+ .icon:hover{
+   color: white;
+  font-size: 5rem;
+ }
+
+
+#precio{
+  background: var(--dark-color);
+  color: white;
+  align-items: center;
+  text-align: center;
+}
+
+section h2{
+  font-family: noelanscript;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#precio div{
+  padding: 1rem 1rem;
+}
+
+#precio div{
+  padding: 1rem 1rem;
+}
+
+#precio div:nth-child(3), #precio div:nth-child(5){
+  border-radius: 1rem;
+  background: var(--light-dark);
+}
+
+/* Ubicación */
+
+#ubicacion{
+  background: var(--complementary-color);
+  color: black;
+  align-items: center;
+  text-align: center;
+}
+
+/* .half{
+width: 40%;
+flex: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+display: flex;
+flex-direction: column;
+align-content: space-between;  
+text-align: center;
+margin: 1.5rem;
+} */
+
+/* .icono{
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* #half-ubicacion{
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;  
+} */
+
+/* .big{
+  font-size: 10rem;
+} */
+
+footer{
+  background: var(--primary-color);
+  text-align: center; 
+  padding: 1rem;
+  
+}
+
+/* #mobiliario{
+  background: var(--dark-color) url(../img/mobiliario.jpg) no-repeat center center/cover  ;
+}
+
+#canchitafut{
+  background: var(--dark-color) url(../img/canchitafut.jpg) no-repeat center center/cover  ;
+}
+#inflable1{
+  background: var(--dark-color) url(../img/inflable1recortado.jpg) no-repeat center center/cover;
+ 
+}
+#inflable2{
+  background: var(--dark-color) url(../img/inflable2recortado.jpg) no-repeat center center/cover;
+}
+*/
+/* #estacionamiento{
+  background: var(--dark-color) url(/LaChiripa/img/estacionamiento.jpeg) no-repeat center center/cover; */
