@@ -25,6 +25,10 @@ light complementario cyan #5de3e6
   padding: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
